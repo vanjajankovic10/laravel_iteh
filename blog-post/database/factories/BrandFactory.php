@@ -17,7 +17,9 @@ class BrandFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->words(rand(1, 2), true),
+            'CEO' => fake()->name(),
+            'year' => $this->faker->year(),
         ];
     }
 }
