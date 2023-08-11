@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('purpose');
+            $table->string('skin_type');
+            $table->foreignId('brand_id');
+            $table->foreignId('user_id');
         });
     }
 
@@ -22,6 +26,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::table('meetings', function (Blueprint $table) {
+            $table->dropForeign("user_id");
+            $table->dropForeign("brand_id");
+        });
     }
 };

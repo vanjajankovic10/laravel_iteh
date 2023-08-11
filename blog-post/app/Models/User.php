@@ -23,6 +23,10 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function brands()
+    {
+        return $this->hasMany(Product::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
