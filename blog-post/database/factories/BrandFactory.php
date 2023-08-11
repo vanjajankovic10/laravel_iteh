@@ -20,6 +20,7 @@ class BrandFactory extends Factory
             'name' => $this->faker->words(rand(1, 2), true),
             'CEO' => fake()->name(),
             'year' => $this->faker->year(),
+            'country' => $this->faker->randomElement(['USA', 'France', 'Japan']),
         ];
     }
 }
