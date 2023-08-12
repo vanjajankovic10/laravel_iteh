@@ -24,8 +24,8 @@ Route::get('/greeting', function () {
     return 'Hello World';
 });
 
-Route::get('/users', [UserController::class, 'index']);
+//Route::get('/users', [UserController::class, 'index']);
 
-Route::get('/products', [ProductController::class, 'index']);
+//Route::get('/products', [ProductController::class, 'index']);
 
-Route::get('/brands', [BrandController::class, 'index']);
+//Route::get('/brands', [BrandController::class, 'index']);
