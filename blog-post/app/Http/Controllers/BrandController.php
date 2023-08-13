@@ -38,6 +38,8 @@ class BrandController extends Controller
             'year' => $request->year,
             'country' => $request->country,
         ]);
+
+        return response()->json(['Brand created successfully', new BrandResource($brand)]);
     }
 
     /**
